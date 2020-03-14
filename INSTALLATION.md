@@ -23,6 +23,8 @@ To run from the command line in the foreground:
 mongod --config /usr/local/etc/mongod.conf
 ```
 
+(you can exit with `control-c`)
+
 To run as a service:
 
 ```
@@ -33,7 +35,8 @@ brew services start mongodb-community@4.0
 
 First, [download the Windows 64-bit](https://www.mongodb.com/download-center/community?jmp=docs), MSI installation for the current version.
 
-Next, double-click the MSI file you downloaded. You can install with the defaults. Install MongoDB Compass
+Next, double-click the MSI file you downloaded. You can install with the
+defaults. Install [MongoDB Compass](https://www.mongodb.com/products/compass)
 for a GUI for the database.
 
 ## Installing on Linux
@@ -69,7 +72,7 @@ sudo systemctl start mongodb
 sudo systemctl restart mongodb
 ```
 
-By default Mongo is setup to run automatically to disable/enable this behavior:
+By default Mongo is setup to run automatically. To disable/enable this behavior:
 
 ```
 sudo systemctl disable mongodb

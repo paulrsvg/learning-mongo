@@ -13,6 +13,7 @@ const mongoose = require('mongoose');
 
 // connect to the database
 mongoose.connect('mongodb://localhost:27017/test', {
+  useUnifiedTopology: true,
   useNewUrlParser: true
 });
 
@@ -38,7 +39,9 @@ const Ticket = mongoose.model('Ticket', ticketSchema);
 app.get('/api/tickets', async (req, res) => {
   try {
     let tickets = await Ticket.find();
-    res.send(tickets);
+    res.send({
+      tickets: tickets
+    });
   } catch (error) {
     console.log(error);
     res.sendStatus(500);
@@ -52,7 +55,9 @@ app.post('/api/tickets', async (req, res) => {
   });
   try {
     await ticket.save();
-    res.send(ticket);
+    res.send({
+      ticket: ticket
+    });
   } catch (error) {
     console.log(error);
     res.sendStatus(500);

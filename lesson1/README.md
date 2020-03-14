@@ -1,4 +1,4 @@
-# Learning Mongo: Lesson 1: Using the Mongo console
+# Lesson 1: Using the Mongo console
 
 If you have MongoDB running, then you can type the following at the command line:
 
@@ -53,7 +53,7 @@ Let's insert some more records:
 db.students.insertMany([
   { name: "Helen",
     status:"inactive" },
-  { name:"Ashkay",
+  { name:"Akshay",
     status:"active",
     clubs:["Film Students","Anime Monthly Movie"]}
 ]);
