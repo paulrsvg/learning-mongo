@@ -55,7 +55,14 @@ We first need to configure Mongoose. Create a file called `tickets.js`
 and add the following:
 
 ```javascript
-app.use(express.static('public'));
+const express = require('express');
+const bodyParser = require("body-parser");
+
+const app = express();
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({
+  extended: false
+}));
 
 const mongoose = require('mongoose');
 
