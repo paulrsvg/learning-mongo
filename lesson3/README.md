@@ -230,6 +230,16 @@ The function uses `res.sendStatus(200)`, which returns a 200 OK status code, but
 previously this also returned 200 OK for the status, but with some
 data.
 
+## Listening
+
+The final line should be:
+
+```javascript
+app.listen(3000, () => console.log('Server listening on port 3000!'));
+```
+
+This tells the server to listen for incoming connections on port 3000.
+
 ## Test it
 
 The application should be done! It now saves data to the database instead of
